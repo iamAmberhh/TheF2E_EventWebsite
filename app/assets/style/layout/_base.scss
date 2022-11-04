@@ -1,0 +1,21 @@
+body{
+  background-image: url(../images/bg.png);
+  background-position: center;
+  background-size: cover;
+  color:$primary;
+}
+.font-garamond{
+  font-family: 'EB Garamond', serif;
+}
+.font-roboto{
+  font-family: 'Roboto', sans-serif;
+}
+.font-serif{
+  font-family: 'Noto Serif TC', serif;
+}
+p{
+  margin-bottom: 0;
+}
+ul{
+  list-style: none;
+}

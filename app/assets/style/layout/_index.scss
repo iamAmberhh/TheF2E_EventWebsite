@@ -1,5 +1,76 @@
-.index__h1 {
-  color:#00cc99;
-  font-size: 20px;
-  font-weight: 400;
+.bg {
+    background-image: url(../images/banner-img-1.png);
+    background-position: left top;
+    height: 100vh;
+    @include media-breakpoint-up(lg) {
+        height: auto;
+    }
+}
+
+.banner {
+    height: 100%;
+    border-top:12px solid $primary;
+    border-bottom:12px solid $primary;
+    background-image: url(../images/Rectangle-sm.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+    }
+}
+
+.btn-shadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.prize {
+    z-index: 10;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    @include media-breakpoint-up(md){
+        bottom: 30px;
+    }
+    @include media-breakpoint-up(lg){
+        right:10%;
+    }
+}
+
+.hacker-img {
+    position: absolute;
+    bottom: -2%;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    @include media-breakpoint-up(md){
+        left: 18%;
+        width: 70%;
+    }
+    @include media-breakpoint-up(lg){
+        left: 26%;
+        width: 55%;
+    }
+    @include media-breakpoint-up(xl){
+        left: 28%;
+        width: 60%;
+    }
+}
+.mission{
+    position: absolute;
+    z-index:5;
+    right: 0;
+    top: 15%;
+    width: 50%;
+    @include media-breakpoint-up(sm){
+        width: 40%;
+        top: -5%;
+    }
+    @include media-breakpoint-up(lg){
+        width: 30%;
+        top: -10%;
+        right: -2%;
+    }
 }
