@@ -633,7 +633,7 @@ progress {
 
 @media (min-width: 768px) {
   .container, .container-sm, .container-md {
-    max-width: 720px;
+    max-width: 750px;
   }
 }
 
@@ -12816,9 +12816,15 @@ ul {
   background-repeat: no-repeat;
 }
 
+@media (min-width: 768px) {
+  .banner {
+    height: 80vh;
+  }
+}
+
 @media (min-width: 992px) {
   .banner {
-    height: 100vh;
+    height: 90vh;
   }
 }
 
@@ -12857,8 +12863,8 @@ ul {
 
 @media (min-width: 768px) {
   .hacker-img {
-    left: 18%;
-    width: 70%;
+    left: 40%;
+    width: 60%;
   }
 }
 
@@ -12897,6 +12903,78 @@ ul {
     top: -10%;
     right: -2%;
   }
+}
+
+.letter-spacing-lg {
+  letter-spacing: 0.6em;
+}
+
+.double-border {
+  border-bottom: 4px solid #38241B;
+  padding-bottom: 8px;
+}
+
+.double-border::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #38241B;
+}
+
+.bg-block {
+  border-bottom: 20px solid #38241B;
+  background-image: url(../images/mission-block-sm.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .bg-block {
+    background-image: url(../images/mission-block-md.svg);
+  }
+}
+
+@media (min-width: 992px) {
+  .bg-block {
+    background-image: url(../images/mission-block-lg.svg);
+  }
+}
+
+.logo-height {
+  height: 65px;
+  max-width: 100%;
+  margin-left: auto;
+}
+
+.square {
+  width: 48px;
+  height: 48px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #38241B;
+  position: relative;
+}
+
+.square-active {
+  background-color: #951205;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.timeline {
+  width: 100%;
+  height: 4px;
+  background-color: #38241B;
+  position: absolute;
+  z-index: -5;
+  top: 42%;
+  left: 50%;
 }
 
 /*# sourceMappingURL=all.css.map */
