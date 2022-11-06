@@ -1,3 +1,24 @@
+.newpaper-1 {
+    z-index: 1050;
+    position: absolute;
+    top: 0;
+}
+
+.newpaper-2 {
+    z-index: 1050;
+    position: absolute;
+    top: 0;
+    left: -10%;
+}
+
+.newpaper-3 {
+    z-index: 1050;
+    position: absolute;
+    top: 0;
+    right: -15%;
+}
+
+
 .bg {
     background-image: url(../images/banner-img-1.png);
     background-position: left top;
@@ -75,7 +96,6 @@
     right: 0;
     top: 15%;
     width: 50%;
-
     @include media-breakpoint-up(sm) {
         width: 40%;
         top: -5%;
@@ -87,6 +107,19 @@
         right: -2%;
     }
 }
+
+// @keyframes example {
+//     from {
+//         top: -30%;
+//         right: -20%;
+//         scale: 0.5;
+//     }
+//     to {
+//         top: -10%;
+//         right: -2%;
+//         scale: 1;
+//     }
+// }
 
 .letter-spacing-lg {
     letter-spacing: 0.6em;
@@ -106,8 +139,6 @@
 }
 
 .bg-block {
-    // height: 100%;
-    // border-top: 20px solid $primary;
     border-bottom: 20px solid $primary;
     background-image: url(../images/mission-block-sm.svg);
     background-size: cover;
@@ -145,7 +176,8 @@
     width: 100%;
     height: 100%;
 }
-.timeline{
+
+.timeline {
     width: 100%;
     height: 4px;
     background-color: $primary;
@@ -154,4 +186,70 @@
     top: 42%;
     left: 50%;
 
+    &-active {
+        background-color: $secondary;
+    }
+
+}
+
+.badge-prize {
+    width: 200px;
+    position: absolute;
+    z-index: 3;
+    bottom: 22%;
+    left: 24%;
+
+    @include media-breakpoint-up(sm) {
+        left: 30%;
+    }
+
+    @include media-breakpoint-up(md) {
+        width: 225px;
+        left: 21%;
+    }
+}
+
+.live-share-bg {
+    border-left: 12px solid $primary;
+    border-right: 12px solid $primary;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+
+    &-1 {
+        background-image: url(../images/live-share-1.gif);
+    }
+
+    &-2 {
+        background-image: url(../images/live-share-2.gif);
+    }
+
+    &-3 {
+        background-image: url(../images/live-share-3.gif);
+    }
+
+    &-4 {
+        background-image: url(../images/live-share-4.gif);
+    }
+}
+
+.live-taps {
+    background-image: url(../images/tape.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.live-link {
+    width: 100%;
+    height: 500px;
+
+    @include media-breakpoint-up(md) {
+        height: 600px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: 500px;
+    }
 }
