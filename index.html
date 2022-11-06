@@ -8,48 +8,54 @@
   <title>
     The F2E 4th
   </title>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-primary text-white d-flex">
+
+  <div>
+    <img src="assets/images/banner-1.png" alt="banner" class="newpaper-1">
+    <img src="assets/images/banner-2.png" alt="banner" class="newpaper-2">
+    <img src="assets/images/banner-3.png" alt="banner" class="newpaper-3">
+  </div>
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary text-white d-flex fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand d-none d-sm-block" href="#">
         <img src="./assets/images/hex-logo 1.svg" alt="logo" width="145" height="35">
       </a>
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="d-sm-none link-white btn btn-secondary rounded-pill px-5 btn-shadow" href="#">立即報名</a>
-     
+
       <div class="collapse navbar-collapse align-bottom" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto me-sm-2 text-center">
           <li class="nav-item me-md-3">
-            <a class="nav-link" aria-current="page" href="#">關卡任務</a>
+            <a class="nav-link" aria-current="page" href="#mission">關卡任務</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">競賽說明</a>
+            <a class="nav-link" href="#schedule">競賽說明</a>
           </li>
           <li class="nav-item">
           </li>
         </ul>
       </div>
-     
+
       <a class="link-white d-none d-sm-block btn btn-secondary rounded-pill px-5 btn-shadow" href="#">立即報名</a>
     </div>
   </nav>
 
   
-<div class="bg py-3">
 
+
+<div class="bg py-3 mt-6">
   <section class=" banner m-md-5 position-relative">
     <div class="container pt-5 px-4 pb-md-8 pb-lg-0 ">
       <img src="assets/images/mission.png" alt="icon" class="mission">
@@ -59,9 +65,18 @@
         <div class="col-12 col-lg-4 order-2 order-md-1 px-4">
           <p class="font-serif fs-1 mb-3 ">前端工程師和介面設計師，<br class="d-none d-md-block d-lg-none">攜手合作拿獎金</p>
           <ul class="fs-4 ps-0">
-            <li>羨慕別人的酷酷網頁動畫？</li>
-            <li>滿足不了同事的許願？</li>
-            <li>動畫技能樹太雜無從下手？</li>
+            <li>
+              <span class="typing-1"></span>
+              <span class="cursor">_</span>
+            </li>
+            <li>
+              <span class="typing-2"></span>
+              <span class="cursor">_</span>
+            </li>
+            <li>
+              <span class="typing-3"></span>
+              <span class="cursor">_</span>
+            </li>
           </ul>
         </div>
 
@@ -92,7 +107,7 @@
   </section>
 </div>
 
-<section class="container py-8 mx-auto">
+<section class="container py-8 mx-auto overflow-hidden" id="mission">
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-1 gy-6">
     <div class="col text-center  mb-lg-8 d-flex flex-column justify-content-center">
       <h2 class="mb-6"><img src="assets/images/hexschool.png" alt="logo" class="img-fluid"></h2>
@@ -100,7 +115,7 @@
           class="d-lg-none">三大關卡來襲</p>
       <div class="double-border d-md-none d-lg-block"></div>
     </div>
-    <div class="col">
+    <div class="col" data-aos="fade-right">
       <div class="d-flex justify-content-between align-items-center bg-primary text-white px-5 pt-3 pb-3 pb-md-0">
         <p class="display-6 d-none d-lg-block">視差滾動 Parallax Scrolling</p>
         <img src="assets/images/logo-block.svg" alt="logo" class="logo-height">
@@ -119,7 +134,7 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col" data-aos="fade-left">
       <div class="d-flex justify-content-between align-items-center bg-primary text-white px-5 pt-3 pb-3 pb-md-0">
         <p class="display-6 d-none d-lg-block">線上簽署 Canvas
         </p>
@@ -139,7 +154,7 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col" data-aos="fade-right">
       <div class="d-flex justify-content-between align-items-center bg-primary text-white px-5 pt-3 pb-3 pb-md-0">
         <p class="display-6 d-none d-lg-block">Scrum JS draggable</p>
         <img src="assets/images/logo-titan.svg" alt="logo" class="logo-height">
@@ -162,7 +177,7 @@
 
 </section>
 
-<section>
+<section id="schedule">
   <h2 class="bg-primary text-white p-6 text-center font-serif display-4">賽程時間</h2>
   <div class="container py-8">
     <!-- swiper -->
@@ -174,15 +189,15 @@
           <div class="d-flex flex-column align-items-center">
             <p class="fs-3 mb-4">開始報名</p>
             <div class="square mb-5 square-active"></div>
-            <div class="timeline"></div>
+            <div class="timeline timeline-active"></div>
             <p class="fs-5">10/13(四) 早上 11:00<br>至 11/6(日) 晚上 23:59</p>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="d-flex flex-column align-items-center me-5">
             <p class="fs-3 mb-4">開賽</p>
-            <div class="square mb-5"></div>
-            <div class="timeline"></div>
+            <div class="square mb-5 square-active"></div>
+            <div class="timeline timeline-active"></div>
             <p class="fs-5">UI組、團體組開賽 10/31
               <br>前端組開賽 11 /7
             </p>
@@ -191,8 +206,8 @@
         <div class="swiper-slide">
           <div class="d-flex flex-column align-items-center me-5">
             <p class="fs-3 mb-4">登陸作品</p>
-            <div class="square mb-5"></div>
-            <div class="timeline"></div>
+            <div class="square mb-5 square-active"></div>
+            <div class="timeline timeline-active"></div>
             <p class="fs-5">10/31(一) 中午 12:00
               <br>至11/28(一) 中午 12:00
             </p>
@@ -218,7 +233,7 @@
           <div class="d-flex flex-column align-items-center me-5">
             <p class="fs-3 mb-4">決選</p>
             <div class="square mb-5"></div>
-            <p class="fs-5 pb-5">12/05(五)</p>
+            <p class="fs-5 pb-5">12/23(五)</p>
           </div>
         </div>
       </div>
@@ -246,45 +261,138 @@
       </li>
       <li>決選：由三大企業針對該企業主題進行入圍獎最後篩選，並於 12/23(五)公布企業得獎名單。</li>
     </ul>
-
   </div>
-
-
-
-
 </section>
 
 <section>
   <h2 class="bg-primary text-white p-6 text-center font-serif display-4">獎項</h2>
-  <div class="container">
-    123
+  <div class="container text-center py-8">
+    <ul
+      class="row row-cols-1 row-cols-md-2 row-cols-lg-3 ps-0 gy-6 d-flex justify-content-center align-items-center mb-0">
+      <li class="col position-relative">
+        <img src="assets/images/prize-1.png" alt="prize" class="img-fluid">
+        <div class="badge badge-prize btn-shadow bg-secondary fs-5 fs-md-3 px-4 py-3" data-aos="fade-right">$10,000 (3名)
+        </div>
+        <p class="fs-3 mt-4 pb-5">每個關卡各 1 組</p>
+      </li>
+      <li class="col position-relative">
+        <img src="assets/images/prize-2.png" alt="prize" class="img-fluid">
+        <div class="badge badge-prize btn-shadow bg-secondary fs-5 fs-md-3 px-4 py-3" data-aos="fade-right">$3000 (6名)
+        </div>
+        <p class="fs-3 mt-4">每個關卡各 2 名<br>
+          設計 1 名、前端 1 名</p>
+      </li>
+      <li class="col position-relative">
+        <img src="assets/images/prize-3.png" alt="prize" class="img-fluid">
+        <div class="badge badge-prize btn-shadow bg-secondary fs-5 fs-md-3 px-4 py-3" data-aos="fade-right">數位獎狀(60名)
+        </div>
+        <p class="fs-3 mt-4">每個關卡個人組十位
+          <br>團體組十組
+        </p>
+      </li>
+      <li class="col fs-2 text-nowrap">以上皆提供<br class="d-none d-md-block d-lg-none">完賽數位獎狀</li>
+    </ul>
   </div>
 </section>
 
 
 <section>
   <h2 class="bg-primary text-white p-6 text-center font-serif display-4">各界大神直播分享</h2>
+  <div class="container py-7">
+    <ul class="ps-0 row row-cols-1 row-cols-md-2 gy-6 gx-3">
+      <li class="col" data-aos="fade-up">
+        <div
+          class="live-share-bg live-share-bg-1 text-center d-flex flex-column justify-content-between px-4 pt-6 pb-5 position-relative">
+          <h3 class="font-serif display-5 fs-md-1">網站的動態趨勢</h3>
+          <a href="https://www.youtube.com/watch?v=9gzDFKTIFB4" class="live-link" target="_blank"></a>
+          <div>
+            <div class="live-taps fs-4 text-white">李明<br>版塊設計創辦人兼總監</div>
+            <span class="font-roboto fs-2">11/03(四)20:00 ~ 21:30</span>
+          </div>
+        </div>
+
+      </li>
+      <li class="col" data-aos="fade-up">
+        <div
+          class="live-share-bg live-share-bg-2 text-center d-flex flex-column justify-content-between px-4 pt-6 pb-5 position-relative">
+          <h3 class="font-serif display-5 fs-md-1">jQuery 也可以<br>做到的互動效果</h3>
+          <a href="#" class="live-link" target="_blank"></a>
+          <div>
+            <div class="live-taps fs-4 text-white">Leo<br>Angular Taiwan 傳教士</div>
+            <span class="font-roboto fs-2">11/10(四)20:00 ~ 21:30</span>
+          </div>
+        </div>
+
+      </li>
+      <li class="col" data-aos="fade-up">
+        <div
+          class="live-share-bg live-share-bg-3 text-center d-flex flex-column justify-content-between px-4 pt-6 pb-5 position-relative">
+          <h3 class="font-serif display-5 fs-md-1">網頁可以拖拖拉拉<br>draggable.js 介紹</h3>
+          <a href="#" class="live-link" target="_blank"></a>
+          <div>
+            <div class="live-taps fs-4 text-white">邱繼緯<br>
+              前端工程師</div>
+            <span class="font-roboto fs-2">11/17(四)20:00 ~ 21:30</span>
+          </div>
+        </div>
+
+      </li>
+      <li class="col" data-aos="fade-up">
+        <div
+          class="live-share-bg live-share-bg-4 text-center d-flex flex-column justify-content-between px-4 pt-6 pb-5 position-relative">
+          <h3 class="font-serif display-5 fs-md-1">互動式網頁設計工程師該具備哪些技能？</h3>
+          <a href="#" class="live-link" target="_blank"></a>
+          <div>
+            <div class="live-taps fs-4 text-white">吳哲宇<br>墨雨互動設計創辦人</div>
+            <span class="font-roboto fs-2">11/24(四)20:00 ~ 21:30</span>
+          </div>
+        </div>
+
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="bg-white">
   <div class="container">
-    123
+    <ul
+      class="row row-cols-1 row-cols-md-2 row-cols-lg-4 ps-0 mb-0 pb-6 py-lg-4 d-flex align-items-center gy-6 gy-lg-0">
+      <li class="col text-center">
+        <img src="assets/images/logo-jira.svg" alt="logo" class="img-fluid">
+      </li>
+      <li class="col text-center">
+        <img src="assets/images/logo-confluence.svg" alt="logo" class="img-fluid">
+      </li>
+      <li class="col text-center">
+        <img src="assets/images/logo-miro.svg" alt="logo" class="img-fluid">
+      </li>
+      <li class="col text-center">
+        <img src="assets/images/logo-dottedsign.svg" alt="logo" class="img-fluid">
+      </li>
+    </ul>
+  </div>
+
+</section>
+
+
+<section class=" bg-primary text-white text-center py-6 p-md-7">
+  <div class="container">
+    <h2 class="font-serif fw-bold mb-6 display-4">贊助單位</h2>
+    <ul class="row gy-6 row-cols-1 row-cols-lg-3 d-flex align-items-center ps-0 mb-0">
+      <li class="col">
+        <img src="assets/images/logo-block.svg" alt="logo" class="img-fluid">
+      </li>
+      <li class="col">
+        <img src="assets/images/logo-kdan.svg" alt="logo" class="img-fluid">
+      </li>
+      <li class="col">
+        <img src="assets/images/logo-titan.svg" alt="logo" class="img-fluid">
+      </li>
+    </ul>
   </div>
 </section>
 
-<section class="bg-primary text-white text-center px-5 py-6 p-md-7">
-  <h2 class="font-serif fw-bold mb-6">贊助單位</h2>
-  <div class="row gy-6 row-cols-1 row-cols-lg-3 d-flex align-items-center">
-    <div class="col">
-      <img src="assets/images/logo-block.svg" alt="logo" class="img-fluid">
-    </div>
-    <div class="col">
-      <img src="assets/images/logo-kdan.svg" alt="logo" class="img-fluid">
-    </div>
-    <div class="col">
-      <img src="assets/images/logo-titan.svg" alt="logo" class="img-fluid">
-    </div>
-  </div>
-</section>
 
-  
 
     <footer class="my-2">
       <p class="text-center">六角日報 © Code：Amberhh　/　Design：KT</p>
@@ -294,9 +402,9 @@
     <script src="./assets/js/vendors.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="./assets/js/all.js"></script>
 </body>
 

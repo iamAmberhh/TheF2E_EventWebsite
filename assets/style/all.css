@@ -12779,7 +12779,7 @@ body {
 }
 
 .font-roboto {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto','Noto Sans TC';
 }
 
 .font-serif {
@@ -12792,6 +12792,26 @@ p {
 
 ul {
   list-style: none;
+}
+
+.newpaper-1 {
+  z-index: 1050;
+  position: absolute;
+  top: 0;
+}
+
+.newpaper-2 {
+  z-index: 1050;
+  position: absolute;
+  top: 0;
+  left: -10%;
+}
+
+.newpaper-3 {
+  z-index: 1050;
+  position: absolute;
+  top: 0;
+  right: -15%;
 }
 
 .bg {
@@ -12975,6 +12995,80 @@ ul {
   z-index: -5;
   top: 42%;
   left: 50%;
+}
+
+.timeline-active {
+  background-color: #951205;
+}
+
+.badge-prize {
+  width: 200px;
+  position: absolute;
+  z-index: 3;
+  bottom: 22%;
+  left: 24%;
+}
+
+@media (min-width: 576px) {
+  .badge-prize {
+    left: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .badge-prize {
+    width: 225px;
+    left: 21%;
+  }
+}
+
+.live-share-bg {
+  border-left: 12px solid #38241B;
+  border-right: 12px solid #38241B;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.live-share-bg-1 {
+  background-image: url(../images/live-share-1.gif);
+}
+
+.live-share-bg-2 {
+  background-image: url(../images/live-share-2.gif);
+}
+
+.live-share-bg-3 {
+  background-image: url(../images/live-share-3.gif);
+}
+
+.live-share-bg-4 {
+  background-image: url(../images/live-share-4.gif);
+}
+
+.live-taps {
+  background-image: url(../images/tape.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.live-link {
+  width: 100%;
+  height: 500px;
+}
+
+@media (min-width: 768px) {
+  .live-link {
+    height: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .live-link {
+    height: 500px;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */
