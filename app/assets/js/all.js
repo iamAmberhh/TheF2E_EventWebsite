@@ -1,16 +1,19 @@
 const currentMonth = new Date().getMonth() + 1;
 const currentDate = new Date().getDate();
-const square = document.querySelectorAll(".square");
-const squareTimeline = document.querySelectorAll(".timeline");
+const square = document.querySelectorAll(".schedule-square-icon");
+const squareTimeline = document.querySelectorAll(".schedule-square-timeline");
+const newspaperRight = document.querySelector(".newspaper-right");
+
+// 賽程
 if (currentMonth == 12) {
   if (currentDate >= 1 && currentDate < 23) {
-    square[4].classList.add("square-active");
-    squareTimeline[3].classList.add("timeline-active");
-    square[6].classList.add("square-active");
-    squareTimeline[4].classList.add("timeline-active");
+    square[4].classList.add("schedule-square-icon-active");
+    squareTimeline[3].classList.add("schedule-square-timeline-active");
+    square[6].classList.add("schedule-square-icon-active");
+    squareTimeline[4].classList.add("schedule-square-timeline-active");
   } else if (currentDate >= 23) {
-    square[5].classList.add("square-active");
-    square[7].classList.add("square-active");
+    square[5].classList.add("schedule-square-icon-active");
+    square[7].classList.add("schedule-square-icon-active");
   }
 }
 
@@ -35,88 +38,88 @@ AOS.init({
 });
 
 
-const newspaper = document.querySelector(".newpaper-3");
-
-function displayNone() {
-  newspaper.classList.add("d-none");
-}
 
 
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 function openAnimation(){
-  gsap.to(".newpaper-1", {
+  gsap.to(".newspaper-top", {
     y: -1000,
     duration: 3,
   });
   
-  gsap.to(".newpaper-2", {
+  gsap.to(".newspaper-left", {
     x: -1000,
     y: 2000,
     duration: 5,
   });
-  gsap.to(".newpaper-3", {
+  gsap.to(".newspaper-right", {
     x: 2000,
     y: 2000,
     duration: 5,
   });
 
-
+  gsap.to(".typing-1", {
+    text: "羨慕別人的酷酷網頁動畫？",
+    ease: "none",
+    duration: 2,
+    delay: 2,
+    scrollTrigger: {
+      trigger: ".typing-1",
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".typing-2", {
+    text: "滿足不了同事的許願？",
+    ease: "none",
+    duration: 2,
+    delay: 5,
+    scrollTrigger: {
+      trigger: ".typing-2",
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.to(".typing-3", {
+    text: "動畫技能樹太雜無從下手？",
+    ease: "none",
+    duration: 2,
+    delay: 8,
+    scrollTrigger: {
+      trigger: ".typing-3",
+      toggleActions: "play pause resume reset",
+    },
+  });
+  gsap.fromTo(
+    ".cursor",
+    0,
+    {
+      visibility: "hidden",
+    },
+    {
+      visibility: "visible",
+      repeat: -1,
+      yoyo: true,
+      repeatDelay: 0.3,
+    }
+  );
+  gsap.from(".banner-mission", {
+    x: -1500,
+    y: -300,
+    duration: 0.5,
+    delay: 2,
+  });
   
   setTimeout("displayNone()", 1000);
 }
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 
 
-gsap.to(".typing-1", {
-  text: "羨慕別人的酷酷網頁動畫？",
-  ease: "none",
-  duration: 2,
-  delay: 2,
-  scrollTrigger: {
-    trigger: ".typing-1",
-    toggleActions: "play pause resume reset",
-  },
-});
-gsap.to(".typing-2", {
-  text: "滿足不了同事的許願？",
-  ease: "none",
-  duration: 2,
-  delay: 5,
-  scrollTrigger: {
-    trigger: ".typing-2",
-    toggleActions: "play pause resume reset",
-  },
-});
-gsap.to(".typing-3", {
-  text: "動畫技能樹太雜無從下手？",
-  ease: "none",
-  duration: 2,
-  delay: 8,
-  scrollTrigger: {
-    trigger: ".typing-3",
-    toggleActions: "play pause resume reset",
-  },
-});
-gsap.fromTo(
-  ".cursor",
-  0,
-  {
-    visibility: "hidden",
-  },
-  {
-    visibility: "visible",
-    repeat: -1,
-    yoyo: true,
-    repeatDelay: 0.3,
-  }
-);
-gsap.from(".mission", {
-  x: -1500,
-  y: -300,
-  duration: 0.5,
-  delay: 2,
-});
+function displayNone() {
+  newspaperRight.classList.add("d-none");
+}
+
+
+
 
 const swiper = new Swiper(".swiper", {
   loop: false,
