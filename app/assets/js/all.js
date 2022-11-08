@@ -14,7 +14,6 @@ if (currentMonth == 12) {
   }
 }
 
-
 AOS.init({
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
   startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
@@ -35,23 +34,39 @@ AOS.init({
   anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
 
+
+const newspaper = document.querySelector(".newpaper-3");
+
+function displayNone() {
+  newspaper.classList.add("d-none");
+}
+
+
+
+function openAnimation(){
+  gsap.to(".newpaper-1", {
+    y: -1000,
+    duration: 3,
+  });
+  
+  gsap.to(".newpaper-2", {
+    x: -1000,
+    y: 2000,
+    duration: 5,
+  });
+  gsap.to(".newpaper-3", {
+    x: 2000,
+    y: 2000,
+    duration: 5,
+  });
+
+
+  
+  setTimeout("displayNone()", 1000);
+}
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
-gsap.to(".newpaper-1", {
-  y: -1000,
-  duration: 5,
-});
 
-gsap.to(".newpaper-2", {
-  x: -1000,
-  y: 2000,
-  duration: 5,
-});
-gsap.to(".newpaper-3", {
-  x: 2000,
-  y: 2000,
-  duration: 5,
-});
 
 gsap.to(".typing-1", {
   text: "羨慕別人的酷酷網頁動畫？",
@@ -96,20 +111,12 @@ gsap.fromTo(
     repeatDelay: 0.3,
   }
 );
-gsap.from(".mission",{
+gsap.from(".mission", {
   x: -1500,
-  y:-300,
+  y: -300,
   duration: 0.5,
-  delay:2,
-})
-
-
-const newspaper = document.querySelector('.newpaper-3');
-function displayNone(){
-  newspaper.classList.add('d-none');
-}
-setTimeout("displayNone()",1000);
-
+  delay: 2,
+});
 
 const swiper = new Swiper(".swiper", {
   loop: false,
