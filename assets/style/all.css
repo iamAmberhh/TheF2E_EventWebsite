@@ -12767,93 +12767,6 @@ fieldset:disabled .btn {
   }
 }
 
-.loading {
-  z-index: 2000;
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  top: 10%;
-  left: 15%;
-}
-
-@media (min-width: 768px) {
-  .loading {
-    left: 35%;
-  }
-}
-
-@media (min-width: 992px) {
-  .loading {
-    left: 40%;
-  }
-}
-
-.loading-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #222;
-  z-index: 1999;
-}
-
-.fade-out {
-  opacity: 0;
-  -webkit-transition: 3s ease;
-  -o-transition: 3s ease;
-  transition: 3s ease;
-}
-
-.loading-icon {
-  -webkit-animation-name: example;
-          animation-name: example;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-@-webkit-keyframes example {
-  0% {
-    scale: 0.5;
-  }
-  25% {
-    scale: 1;
-  }
-  50% {
-    scale: 0.5;
-  }
-  75% {
-    scale: 1;
-  }
-  100% {
-    scale: 0.5;
-  }
-}
-
-@keyframes example {
-  0% {
-    scale: 0.5;
-  }
-  25% {
-    scale: 1;
-  }
-  50% {
-    scale: 0.5;
-  }
-  75% {
-    scale: 1;
-  }
-  100% {
-    scale: 0.5;
-  }
-}
-
 body {
   background-image: url(../images/bg.png);
   background-position: center;
@@ -12881,34 +12794,34 @@ ul {
   list-style: none;
 }
 
-.newpaper-1 {
+.newspaper-top {
   z-index: 1050;
   position: absolute;
   top: 0;
 }
 
-.newpaper-2 {
+.newspaper-left {
   z-index: 1050;
   position: absolute;
   top: 0;
   left: -10%;
 }
 
-.newpaper-3 {
+.newspaper-right {
   z-index: 1050;
   position: absolute;
   top: 0;
   right: -15%;
 }
 
-.bg {
+.banner-bg {
   background-image: url(../images/banner-img-1.png);
   background-position: left top;
   height: 100vh;
 }
 
 @media (min-width: 992px) {
-  .bg {
+  .banner-bg {
     height: auto;
   }
 }
@@ -12940,7 +12853,7 @@ ul {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.prize {
+.banner-prize {
   z-index: 10;
   position: absolute;
   bottom: 5%;
@@ -12949,18 +12862,18 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .prize {
+  .banner-prize {
     bottom: 30px;
   }
 }
 
 @media (min-width: 992px) {
-  .prize {
+  .banner-prize {
     right: 10%;
   }
 }
 
-.hacker-img {
+.banner-hacker-img {
   position: absolute;
   bottom: -2%;
   left: 0;
@@ -12969,27 +12882,27 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .hacker-img {
+  .banner-hacker-img {
     left: 40%;
     width: 60%;
   }
 }
 
 @media (min-width: 992px) {
-  .hacker-img {
+  .banner-hacker-img {
     left: 26%;
     width: 55%;
   }
 }
 
 @media (min-width: 1200px) {
-  .hacker-img {
+  .banner-hacker-img {
     left: 28%;
     width: 60%;
   }
 }
 
-.mission {
+.banner-mission {
   position: absolute;
   z-index: 5;
   right: 0;
@@ -12998,14 +12911,14 @@ ul {
 }
 
 @media (min-width: 576px) {
-  .mission {
+  .banner-mission {
     width: 40%;
     top: -5%;
   }
 }
 
 @media (min-width: 992px) {
-  .mission {
+  .banner-mission {
     width: 30%;
     top: -10%;
     right: -2%;
@@ -13029,7 +12942,7 @@ ul {
   background-color: #38241B;
 }
 
-.bg-block {
+.mission-block-bg {
   border-bottom: 20px solid #38241B;
   background-image: url(../images/mission-block-sm.svg);
   background-size: cover;
@@ -13038,24 +12951,24 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .bg-block {
+  .mission-block-bg {
     background-image: url(../images/mission-block-md.svg);
   }
 }
 
 @media (min-width: 992px) {
-  .bg-block {
+  .mission-block-bg {
     background-image: url(../images/mission-block-lg.svg);
   }
 }
 
-.logo-height {
+.mission-logo {
   height: 65px;
   max-width: 100%;
   margin-left: auto;
 }
 
-.square {
+.schedule-square-icon {
   width: 48px;
   height: 48px;
   -webkit-transform: rotate(45deg);
@@ -13065,7 +12978,7 @@ ul {
   position: relative;
 }
 
-.square-active {
+.schedule-square-icon-active {
   background-color: #951205;
 }
 
@@ -13074,7 +12987,7 @@ ul {
   height: 100%;
 }
 
-.timeline {
+.schedule-timeline {
   width: 100%;
   height: 4px;
   background-color: #38241B;
@@ -13084,11 +12997,11 @@ ul {
   left: 50%;
 }
 
-.timeline-active {
+.schedule-timeline-active {
   background-color: #951205;
 }
 
-.badge-prize {
+.prize-badge {
   width: 200px;
   position: absolute;
   z-index: 3;
@@ -13097,13 +13010,13 @@ ul {
 }
 
 @media (min-width: 576px) {
-  .badge-prize {
+  .prize-badge {
     left: 30%;
   }
 }
 
 @media (min-width: 768px) {
-  .badge-prize {
+  .prize-badge {
     width: 225px;
     left: 21%;
   }
