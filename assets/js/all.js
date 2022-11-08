@@ -50,21 +50,31 @@ AOS.init({
   anchorPlacement: "top-bottom" // defines which position of the element regarding to window should trigger the animation
 
 });
+var newspaper = document.querySelector(".newpaper-3");
+
+function displayNone() {
+  newspaper.classList.add("d-none");
+}
+
+function openAnimation() {
+  gsap.to(".newpaper-1", {
+    y: -1000,
+    duration: 3
+  });
+  gsap.to(".newpaper-2", {
+    x: -1000,
+    y: 2000,
+    duration: 5
+  });
+  gsap.to(".newpaper-3", {
+    x: 2000,
+    y: 2000,
+    duration: 5
+  });
+  setTimeout("displayNone()", 1000);
+}
+
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
-gsap.to(".newpaper-1", {
-  y: -1000,
-  duration: 5
-});
-gsap.to(".newpaper-2", {
-  x: -1000,
-  y: 2000,
-  duration: 5
-});
-gsap.to(".newpaper-3", {
-  x: 2000,
-  y: 2000,
-  duration: 5
-});
 gsap.to(".typing-1", {
   text: "羨慕別人的酷酷網頁動畫？",
   ease: "none",
@@ -109,13 +119,6 @@ gsap.from(".mission", {
   duration: 0.5,
   delay: 2
 });
-var newspaper = document.querySelector('.newpaper-3');
-
-function displayNone() {
-  newspaper.classList.add('d-none');
-}
-
-setTimeout("displayNone()", 1000);
 var swiper = new Swiper(".swiper", {
   loop: false,
   breakpoints: {
