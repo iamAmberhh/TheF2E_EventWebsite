@@ -1,4 +1,5 @@
 .newspaper-top {
+    width:100vw;
     z-index: 1050;
     position: absolute;
     top: 0;
@@ -18,12 +19,10 @@
     right: -15%;
 }
 
-
 .banner-bg {
     background-image: url(../images/banner-img-1.png);
     background-position: left top;
     height: 100vh;
-
     @include media-breakpoint-up(lg) {
         height: auto;
     }
@@ -63,7 +62,7 @@
     }
 
     @include media-breakpoint-up(lg) {
-        right: 10%;
+        right: 15%;
     }
 }
 
@@ -93,7 +92,7 @@
 .banner-mission {
     position: absolute;
     z-index: 5;
-    right: 0;
+    right: 3%;
     top: 15%;
     width: 50%;
     @include media-breakpoint-up(sm) {
@@ -202,7 +201,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100%;
+    max-height: 750px;
+    max-width: 522px;
 
     &-1 {
         background-image: url(../images/live-share-1.gif);
@@ -241,3 +241,32 @@
     }
 }
 
+
+.svgContainer{
+    width:300px;
+    height: 300px;
+  }
+  
+  .loading{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index:1999;
+  }
+  
+  .loading-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg.jpg);
+    z-index:2000;
+  }
+
+  .fadeOut{
+    opacity:0;
+    transition-duration: 1s;
+  }

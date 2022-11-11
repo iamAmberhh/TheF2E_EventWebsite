@@ -2,7 +2,8 @@ const currentMonth = new Date().getMonth() + 1;
 const currentDate = new Date().getDate();
 const square = document.querySelectorAll(".schedule-square-icon");
 const squareTimeline = document.querySelectorAll(".schedule-square-timeline");
-const newspaperRight = document.querySelector(".newspaper-right");
+const newspaper = document.querySelector(".newspaper");
+const bannerMargin = document.querySelector('.banner-margin');
 
 // 賽程
 if (currentMonth == 12) {
@@ -17,6 +18,7 @@ if (currentMonth == 12) {
   }
 }
 
+// aos
 AOS.init({
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
   startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
@@ -37,90 +39,111 @@ AOS.init({
   anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
 
+// lottie
+const svgContainer = document.querySelector(".svgContainer");
+const loading = document.querySelector(".loading-wrapper");
+lottie.loadAnimation({
+  wrapper: svgContainer,
+  animType: "svg",
+  loop: true,
+  path: "./assets/images/loading.json",
+});
+
+function loadingOut(){
+  loading.classList.add("fadeOut");
+  setTimeout(function (e) {
+  loading.classList.add("d-none");
+}, 5000);
+}
 
 
+// GSAP
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
-function openAnimation(){
-  gsap.to(".newspaper-top", {
-    y: -1000,
-    duration: 3,
-  });
-  
-  gsap.to(".newspaper-left", {
+const newspaperScroll = gsap.timeline();
+newspaperScroll.to(".newspaper-top", {
+  y: -1000,
+  duration: 4,
+  delay:2,
+});
+newspaperScroll.to(".newspaper-left",{
     x: -1000,
     y: 2000,
-    duration: 5,
-  });
-  gsap.to(".newspaper-right", {
+    duration: 6,
+  },
+  "<"
+);
+newspaperScroll.to(".newspaper-right",{
     x: 2000,
     y: 2000,
-    duration: 5,
-  });
+    duration: 6,
+  },
+  "<"
+);
 
-  gsap.to(".typing-1", {
-    text: "羨慕別人的酷酷網頁動畫？",
-    ease: "none",
-    duration: 2,
-    delay: 2,
-    scrollTrigger: {
-      trigger: ".typing-1",
-      toggleActions: "play pause resume reset",
-    },
-  });
-  gsap.to(".typing-2", {
-    text: "滿足不了同事的許願？",
-    ease: "none",
-    duration: 2,
-    delay: 5,
-    scrollTrigger: {
-      trigger: ".typing-2",
-      toggleActions: "play pause resume reset",
-    },
-  });
-  gsap.to(".typing-3", {
-    text: "動畫技能樹太雜無從下手？",
-    ease: "none",
-    duration: 2,
-    delay: 8,
-    scrollTrigger: {
-      trigger: ".typing-3",
-      toggleActions: "play pause resume reset",
-    },
-  });
-  gsap.fromTo(
-    ".cursor",
-    0,
-    {
-      visibility: "hidden",
-    },
-    {
-      visibility: "visible",
-      repeat: -1,
-      yoyo: true,
-      repeatDelay: 0.3,
-    }
-  );
-  gsap.from(".banner-mission", {
+gsap.from(".banner-mission", {
     x: -1500,
     y: -300,
-    duration: 0.5,
-    delay: 2,
+    duration: 1.5,
+    delay:3,
+    function: fadeOut(),
   });
-  
-  setTimeout("displayNone()", 1000);
-}
 
 
+  function fadeOut(){
+    setTimeout(() => {
+      newspaper.classList.add('d-none');
+    }, 3000);
+    // newspaper.classList.add('fadeOut');
+  }
 
-function displayNone() {
-  newspaperRight.classList.add("d-none");
-}
+gsap.to(".typing-1", {
+      text: "羨慕別人的酷酷網頁動畫？",
+      ease: "none",
+      duration: 2,
+      delay: 2,
+      scrollTrigger: {
+        trigger: ".typing-1",
+        toggleActions: "play pause resume reset",
+      },
+    });
+    gsap.to(".typing-2", {
+      text: "滿足不了同事的許願？",
+      ease: "none",
+      duration: 2,
+      delay: 5,
+      scrollTrigger: {
+        trigger: ".typing-2",
+        toggleActions: "play pause resume reset",
+      },
+    });
+    gsap.to(".typing-3", {
+      text: "動畫技能樹太雜無從下手？",
+      ease: "none",
+      duration: 2,
+      delay: 8,
+      scrollTrigger: {
+        trigger: ".typing-3",
+        toggleActions: "play pause resume reset",
+      },
+    });
+    gsap.fromTo(
+      ".cursor",
+      0,
+      {
+        visibility: "hidden",
+      },
+      {
+        visibility: "visible",
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.3,
+      }
+    );
 
 
-
-
+// swiper
 const swiper = new Swiper(".swiper", {
   loop: false,
   breakpoints: {

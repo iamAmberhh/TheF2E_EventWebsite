@@ -17,9 +17,16 @@
   <link rel="stylesheet" href="./assets/style/all.css">
 </head>
 
-<body onload="openAnimation()">
+<body onload="loadingOut()">
+  <!-- onload="loadingOut()" -->
+  <div class="loading-wrapper">
+    <div class="loading">
+    <div class="svgContainer"></div>
+  </div>
+  </div> 
 
-  <div>
+
+  <div class="newspaper">
     <img src="assets/images/banner-1.png" alt="banner" class="newspaper-top">
     <img src="assets/images/banner-2.png" alt="banner" class="newspaper-left">
     <img src="assets/images/banner-3.png" alt="banner" class="newspaper-right">
@@ -65,6 +72,7 @@
 
 
     <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
