@@ -95,7 +95,6 @@ gsap.from(".banner-mission", {
     setTimeout(() => {
       newspaper.classList.add('d-none');
     }, 3000);
-    // newspaper.classList.add('fadeOut');
   }
 
 gsap.to(".typing-1", {
