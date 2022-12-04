@@ -5,20 +5,7 @@ var currentDate = new Date().getDate();
 var square = document.querySelectorAll(".schedule-square-icon");
 var squareTimeline = document.querySelectorAll(".schedule-square-timeline");
 var newspaper = document.querySelector(".newspaper");
-var bannerMargin = document.querySelector('.banner-margin'); // 賽程
-
-if (currentMonth == 12) {
-  if (currentDate >= 1 && currentDate < 23) {
-    square[4].classList.add("schedule-square-icon-active");
-    squareTimeline[3].classList.add("schedule-square-timeline-active");
-    square[6].classList.add("schedule-square-icon-active");
-    squareTimeline[4].classList.add("schedule-square-timeline-active");
-  } else if (currentDate >= 23) {
-    square[5].classList.add("schedule-square-icon-active");
-    square[7].classList.add("schedule-square-icon-active");
-  }
-} // aos
-
+var bannerMargin = document.querySelector('.banner-margin'); // aos
 
 AOS.init({
   disable: false,
