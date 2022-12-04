@@ -5,19 +5,6 @@ const squareTimeline = document.querySelectorAll(".schedule-square-timeline");
 const newspaper = document.querySelector(".newspaper");
 const bannerMargin = document.querySelector('.banner-margin');
 
-// 賽程
-if (currentMonth == 12) {
-  if (currentDate >= 1 && currentDate < 23) {
-    square[4].classList.add("schedule-square-icon-active");
-    squareTimeline[3].classList.add("schedule-square-timeline-active");
-    square[6].classList.add("schedule-square-icon-active");
-    squareTimeline[4].classList.add("schedule-square-timeline-active");
-  } else if (currentDate >= 23) {
-    square[5].classList.add("schedule-square-icon-active");
-    square[7].classList.add("schedule-square-icon-active");
-  }
-}
-
 // aos
 AOS.init({
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
